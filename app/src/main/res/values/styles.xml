@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <style name="RoundedFrameStyle">
+        <item name="borderWidth">3dp</item>
+        <item name="borderRound">5dp</item>
+    </style>
+
+    <style name="NoBackgroundColorButton">
+        <item name="backgroundColor">@null</item>
+    </style>
+    
+</resources>

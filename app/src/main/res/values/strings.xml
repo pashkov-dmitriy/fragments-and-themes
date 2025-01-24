@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name" translatable="false">My Application</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="light_mode">light mode</string>
+    <string name="dark_mode">dark mode</string>
+    <string name="dynamic_colors_enabled">enable Dynamic Colors</string>
+</resources>

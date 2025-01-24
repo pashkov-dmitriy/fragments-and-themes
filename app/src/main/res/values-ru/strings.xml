@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="light_mode">светлый режим</string>
+    <string name="dark_mode">темный режим</string>
+    <string name="dynamic_colors_enabled">вклюяить динамические цвета</string>
+</resources>
