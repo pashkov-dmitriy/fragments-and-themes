@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="10dp"
-    tools:context=".fragment.TopFragment">
+    android:background="@drawable/customborder"
+    tools:context=".presintation.fragment.TopFragment">
 
     <Button
         android:id="@+id/light_mode"
@@ -26,5 +28,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/dynamic_colors_enabled" />
+
+    <Button
+        android:id="@+id/choose_color_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="@string/choose_color" />
 
 </LinearLayout>

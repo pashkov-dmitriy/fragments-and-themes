@@ -3,4 +3,7 @@
     <string name="light_mode">светлый режим</string>
     <string name="dark_mode">темный режим</string>
     <string name="dynamic_colors_enabled">вклюяить динамические цвета</string>
+    <string name="choose_color">выбрать цвет</string>
+    <string name="color_picker_positive_btn">" Выбрать"</string>
+    <string name="color_picker_negative_btn">Отмена</string>
 </resources>

@@ -1,7 +1,9 @@
 <resources>
-    <string name="app_name" translatable="false">My Application</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="app_name" translatable="false">Themes Example</string>
     <string name="light_mode">light mode</string>
     <string name="dark_mode">dark mode</string>
     <string name="dynamic_colors_enabled">enable Dynamic Colors</string>
+    <string name="choose_color">choose color</string>
+    <string name="color_picker_positive_btn">Select</string>
+    <string name="color_picker_negative_btn">Cancel</string>
 </resources>
