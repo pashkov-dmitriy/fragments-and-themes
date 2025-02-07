@@ -38,7 +38,7 @@ class TopFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        bindings = FragmentTopBinding.inflate(layoutInflater)
+
     }
 
     override fun onCreateView(
@@ -46,9 +46,7 @@ class TopFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-
-        val view = inflater.inflate(R.layout.fragment_top, container, false)
-        val bindings = FragmentTopBinding.bind(view)
+        bindings = FragmentTopBinding.inflate(inflater, container, false)
 
         bindings.isDynamicColorEnabled
             .setOnCheckedChangeListener { view, checked ->
@@ -107,7 +105,7 @@ class TopFragment : Fragment() {
             cpd.show()
         }
 
-        return view
+        return bindings.root
     }
 
     companion object {

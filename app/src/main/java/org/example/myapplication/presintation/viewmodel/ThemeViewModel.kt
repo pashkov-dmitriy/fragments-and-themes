@@ -7,15 +7,16 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
+import javax.inject.Inject
 
-@HiltViewModel
 data class ThemeUiState(
     val isDarkMode: Boolean = false,
     val dynamicColorsEnabled: Boolean = false,
     val accentColor: Int = 0x0
 )
 
-class ThemeViewModel: ViewModel() {
+@HiltViewModel
+class ThemeViewModel @Inject constructor(): ViewModel() {
     private val _uiState = MutableStateFlow(ThemeUiState())
     val uiState = _uiState.asStateFlow()
 

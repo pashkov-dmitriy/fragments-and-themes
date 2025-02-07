@@ -6,4 +6,6 @@
     <string name="choose_color">choose color</string>
     <string name="color_picker_positive_btn">Select</string>
     <string name="color_picker_negative_btn">Cancel</string>
+    <string name="text_view_example">Text example</string>
+    <!-- TODO: Remove or change this placeholder text -->
 </resources>

@@ -1,9 +1,12 @@
-package org.example.myapplication
+package org.example.myapplication.presintation
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.color.DynamicColors
 import dagger.hilt.android.AndroidEntryPoint
+import org.example.myapplication.R
+import org.example.myapplication.presintation.fragment.BottomFragment
 import org.example.myapplication.presintation.fragment.TopFragment
 
 @AndroidEntryPoint
@@ -16,11 +19,13 @@ class MainActivity : AppCompatActivity() {
         val currentFragment = supportFragmentManager.findFragmentById(R.id.top_frame)
 
         if (currentFragment == null) {
-            val fragment = TopFragment()
+            val topFragment = TopFragment()
+            val bottomFragment = BottomFragment()
 
             supportFragmentManager
                 .beginTransaction()
-                .add(R.id.top_frame, fragment)
+                .add(R.id.top_frame, topFragment)
+                .add(R.id.bottom_frame, bottomFragment)
                 .commit()
 
         }

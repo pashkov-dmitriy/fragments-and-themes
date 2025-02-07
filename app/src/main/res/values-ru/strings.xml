@@ -6,4 +6,5 @@
     <string name="choose_color">выбрать цвет</string>
     <string name="color_picker_positive_btn">" Выбрать"</string>
     <string name="color_picker_negative_btn">Отмена</string>
+    <string name="text_view_example">Пример текста</string>
 </resources>
