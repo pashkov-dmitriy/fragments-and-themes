@@ -1,11 +1,13 @@
 package org.example.myapplication.presintation.fragment
 
+import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
@@ -50,19 +52,21 @@ class TopFragment : Fragment() {
 
         bindings.isDynamicColorEnabled
             .setOnCheckedChangeListener { view, checked ->
-                val btnHeight = bindings.chooseColorBtn.height
-                val startHeight = bindings.container.height
-                val targetHeight = if (checked) startHeight + btnHeight + 10 else startHeight - btnHeight - 10 // Укажите нужный прирост
+//                val btnHeight = bindings.chooseColorBtn.height
+//                val startHeight = bindings.container.height
+//                val targetHeight = if (checked) startHeight + btnHeight + 10 else startHeight - btnHeight - 10 // Укажите нужный прирост
+//
+//                // Анимация изменения высоты контейнера
+//                ValueAnimator.ofInt(startHeight, targetHeight).apply {
+//                    duration = 600 // Длительность анимации
+//                    addUpdateListener { animator ->
+//                        val value = animator.animatedValue as Int
+//                        bindings.container.minimumHeight = value // Меняем minHeight, а не layoutParams
+//                    }
+//                    start()
+//                }
 
-                // Анимация изменения высоты контейнера
-                ValueAnimator.ofInt(startHeight, targetHeight).apply {
-                    duration = 600 // Длительность анимации
-                    addUpdateListener { animator ->
-                        val value = animator.animatedValue as Int
-                        bindings.container.minimumHeight = value // Меняем minHeight, а не layoutParams
-                    }
-                    start()
-                }
+                animateCheckBox(checked)
 
                 if (checked) {
                     bindings.chooseColorBtn.apply {
@@ -106,6 +110,19 @@ class TopFragment : Fragment() {
         }
 
         return bindings.root
+    }
+
+    private fun animateCheckBox(isChecked: Boolean) {
+        val btnHeight = bindings.chooseColorBtn.height.toFloat()
+        val startHeight = bindings.container.height.toFloat()
+        val targetHeight = if (isChecked) startHeight + btnHeight + 10 else startHeight - btnHeight - 10
+
+        ObjectAnimator.ofFloat(bindings.container, LinearLayout.SCALE_Y, 0f, 1f)
+            .start()
+    }
+
+    private fun addColorPickerButton() {
+        
     }
 
     companion object {

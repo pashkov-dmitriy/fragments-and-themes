@@ -16,7 +16,7 @@ fragmentVersion = "1.6.2"
 constraintlayout = "2.2.0"
 colorPickerVersion = "2.3.0"
 kspVersion = "2.1.0-1.0.29"
-hiltVersion = "2.52"
+hiltVersion = "2.55"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
